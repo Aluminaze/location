@@ -3,16 +3,16 @@ import {
   FOOTER_DESKTOP_PERSONAL_AREA_HEIGHT,
   FOOTER_MOBILE_PERSONAL_AREA_HEIGHT,
   MOBILE_BAR_HEIGHT,
-} from "constants/sizes";
+} from "../../constants/sizes";
+import { makeStyles } from "tss-react/mui";
 
 import { Theme } from "@mui/material/styles";
-import { makeStyles } from "@mui/styles";
 
 const PANEL_SHIFT_TOP = 16;
 const PANEL_SHIFT_LEFT = 8;
 const PANEL_SHIFT_BOTTOM = 16;
 
-export const useStyles = makeStyles((theme: Theme) => ({
+export const useStyles = makeStyles()((theme) => ({
   blockMap: {
     position: "relative",
     width: "100%",
@@ -29,7 +29,7 @@ export const useStyles = makeStyles((theme: Theme) => ({
     zIndex: 1000,
     overflow: "hidden",
     padding: "24px 5px 24px 24px",
-    backgroundColor: theme.mtsColor.background.primary.lightMode,
+    backgroundColor: "green",
     boxShadow:
       "0px 0px 16px rgba(0, 0, 0, 0.08), 0px 4px 16px rgba(0, 0, 0, 0.08)",
     borderRadius: "8px",
@@ -60,7 +60,7 @@ export const useStyles = makeStyles((theme: Theme) => ({
     display: "flex",
     width: "100%",
   },
-  [theme.breakpoints.down("desktopS_1280")]: {
+  [theme.breakpoints.down("lg")]: {
     panelWrapper: {
       maxHeight: `calc(100vh - ${HEADER_DESKTOP_HEIGHT}px - ${FOOTER_DESKTOP_PERSONAL_AREA_HEIGHT}px - ${MOBILE_BAR_HEIGHT}px - ${PANEL_SHIFT_TOP}px - ${PANEL_SHIFT_BOTTOM}px - 48px)`,
     },
@@ -71,7 +71,7 @@ export const useStyles = makeStyles((theme: Theme) => ({
       paddingBottom: MOBILE_BAR_HEIGHT,
     },
   },
-  [theme.breakpoints.down("tablet_768")]: {
+  [theme.breakpoints.down("md")]: {
     panelWrapper: {
       maxHeight: `calc(100vh - ${HEADER_DESKTOP_HEIGHT}px - ${FOOTER_MOBILE_PERSONAL_AREA_HEIGHT}px - ${MOBILE_BAR_HEIGHT}px - ${PANEL_SHIFT_TOP}px - ${PANEL_SHIFT_BOTTOM}px - 48px)`,
     },
