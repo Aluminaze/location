@@ -24,6 +24,8 @@ export const useStyles = makeStyles()((theme) => ({
 
     [theme.breakpoints.down("lg")]: {
       // marginBottom: MOBILE_BAR_HEIGHT,
+      maxHeight: `calc(100vh - ${HEADER_DESKTOP_HEIGHT}px - ${MOBILE_BAR_HEIGHT}px)`,
+      minHeight: `calc(100vh - ${HEADER_DESKTOP_HEIGHT}px - ${MOBILE_BAR_HEIGHT}px)`,
     },
   },
   panel: {
