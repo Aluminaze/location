@@ -8,7 +8,7 @@ export const useStyles = makeStyles()((theme) => {
       width: "100%",
       maxWidth: "100%",
       minWidth: "100%",
-      backgroundColor: "gray",
+      backgroundColor: "white",
       overflowX: "hidden",
     },
     main: {

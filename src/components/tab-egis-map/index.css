@@ -1,0 +1,114 @@
+.egis-custom-popup-header {
+  max-width: 90%;
+  display: flex;
+  flex-grow: 1;
+}
+
+.egis-custom-popup-info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.egis-custom-popup-info__status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.egis-custom-popup-info__location {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.egis-custom-popup-info__list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.egis-custom-popup-info__list__item {
+  display: flex;
+  gap: 5px;
+}
+
+.egis-custom-popup-button {
+  padding: 5px 12px;
+  width: 100%;
+  height: 32px;
+  background: #f2f3f7;
+  border-radius: 6px;
+  margin-top: 20px;
+  font-family: MTSCompactMedium;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.428rem;
+  color: #1d2023;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.egis-custom-popup-button:hover {
+  background: #e2e3e7;
+}
+.egis-custom-popup-button:disabled {
+  background: #bcc3d07f;
+  color: #969fa8;
+  cursor: initial;
+}
+
+.egis-custom-popup-msg {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  margin-top: 20px;
+}
+
+/* NOTE: Изпользуется в leaflet для close-icon */
+.leaflet-popup-close-button {
+  margin: 24px 24px 0 0 !important;
+  color: black !important;
+  transform: scale(1.3) !important;
+}
+
+/* NOTE: zoom buttons */
+.leaflet-top {
+  bottom: 0;
+}
+
+.leaflet-top .leaflet-control-zoom {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.leaflet-popup-content {
+  margin: 0px !important;
+  line-height: 1 !important;
+  padding: 24px;
+}
+
+.leaflet-control-zoom {
+  margin-right: 40px !important;
+  margin-top: 0 !important;
+}
+
+/* NOTE: для расположения zoom buttons посередине высоты окна браузера  */
+@media (max-width: 1439.95px) {
+  .leaflet-control-zoom {
+    margin-right: 24px !important;
+  }
+}
+
+@media (max-width: 1279.95px) {
+  .leaflet-control-zoom {
+    margin-right: 16px !important;
+  }
+}
+
+@media (max-width: 767.95px) {
+  .leaflet-control-zoom {
+    margin-right: 12px !important;
+  }
+}

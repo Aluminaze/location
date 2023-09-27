@@ -9,6 +9,7 @@ import { Switch, Route, Redirect } from "react-router-dom";
 import { useStyles } from "./styles";
 import { useDisplayStatus } from "../../hooks/use-display-status";
 import { Header } from "../header";
+import { MobileBar } from "../mobile-bar";
 
 export function App() {
   const { classes } = useStyles();
@@ -20,7 +21,7 @@ export function App() {
 
       <main className={classes.main}></main>
 
-      {/* {isMobileVersion && <MobileBar />} */}
+      {isMobileVersion && <MobileBar />}
     </div>
   );
 }
