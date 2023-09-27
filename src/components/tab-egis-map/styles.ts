@@ -12,19 +12,22 @@ const PANEL_SHIFT_BOTTOM = 16;
 
 export const useStyles = makeStyles()((theme) => ({
   blockMap: {
-    position: "relative",
+    position: "absolute",
+    left: "0px",
+    top: "0px",
+    right: "0px",
+    bottom: "0px",
     width: "100%",
-    display: "flex",
+    height: "100%",
+    display: "block",
     flexDirection: "column",
-    maxHeight: `calc(100vh - ${HEADER_DESKTOP_HEIGHT}px)`,
-    minHeight: `calc(100vh - ${HEADER_DESKTOP_HEIGHT}px)`,
     overflow: "hidden",
     border: "1px solid red",
 
-    [theme.breakpoints.down("lg")]: {
-      maxHeight: `calc(100vh - ${HEADER_DESKTOP_HEIGHT}px - ${MOBILE_BAR_HEIGHT}px)`,
-      minHeight: `calc(100vh - ${HEADER_DESKTOP_HEIGHT}px - ${MOBILE_BAR_HEIGHT}px)`,
-    },
+    // [theme.breakpoints.down("lg")]: {
+    //   maxHeight: `calc(100vh - ${HEADER_DESKTOP_HEIGHT}px - ${MOBILE_BAR_HEIGHT}px)`,
+    //   minHeight: `calc(100vh - ${HEADER_DESKTOP_HEIGHT}px - ${MOBILE_BAR_HEIGHT}px)`,
+    // },
   },
   panel: {
     width: "328px",
@@ -56,6 +59,15 @@ export const useStyles = makeStyles()((theme) => ({
   map: {
     display: "flex",
     flexDirection: "column",
+    border: "1px solid green",
+    overflow: "hidden",
+
+    width: "100%",
+    height: "100%",
+
+    [theme.breakpoints.down("lg")]: {
+      height: "calc(100% - 50px)",
+    },
   },
   mapContainer: {
     display: "block",

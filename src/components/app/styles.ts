@@ -5,9 +5,9 @@ export const useStyles = makeStyles()((theme) => {
   return {
     app: {
       position: "relative",
-      width: "100%",
-      maxWidth: "100%",
-      minWidth: "100%",
+      width: "100vw",
+      maxWidth: "100vw",
+      minWidth: "100vw",
       backgroundColor: "white",
       overflowX: "hidden",
     },
@@ -19,6 +19,7 @@ export const useStyles = makeStyles()((theme) => {
       display: "flex",
       flexDirection: "column",
       alignItems: "center",
+      position: "relative",
     },
   };
 });
