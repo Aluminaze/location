@@ -23,6 +23,7 @@ export const useStyles = makeStyles()((theme) => ({
     flexDirection: "column",
     overflow: "hidden",
     border: "1px solid red",
+    backgroundColor: "gray",
 
     // [theme.breakpoints.down("lg")]: {
     // maxHeight: `calc(100vh - ${HEADER_DESKTOP_HEIGHT}px - ${MOBILE_BAR_HEIGHT}px)`,
