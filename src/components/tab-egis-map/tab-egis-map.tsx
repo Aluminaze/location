@@ -16,6 +16,8 @@ export const TabEgisMap = (): JSX.Element => {
   const [isMountedMobilePanel, setIsMountedMobilePanel] =
     React.useState<boolean>(false);
 
+  console.log("🚀 ~ isMountedMobilePanel:", isMountedMobilePanel);
+
   const handleCloseDialogMobilePanel = (): void => {
     setIsOpenMobilePanel(false);
     setTimeout(() => {

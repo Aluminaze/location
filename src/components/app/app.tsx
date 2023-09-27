@@ -1,11 +1,5 @@
 import React from "react";
 
-import { Switch, Route, Redirect } from "react-router-dom";
-
-// import { MobileBar } from "components/mobile-bar";
-// import { Landing } from "components/pages/landing";
-// import { Map } from "components/pages/map";
-
 import { useStyles } from "./styles";
 import { useDisplayStatus } from "../../hooks/use-display-status";
 import { Header } from "../header";

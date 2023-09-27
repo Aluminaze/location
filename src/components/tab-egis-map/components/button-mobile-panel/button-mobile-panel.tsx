@@ -12,5 +12,10 @@ export const ButtonMobilePanel = (
   const { onClick } = props;
   const { classes } = useStyles();
 
-  return <div className={classes.btn}>PANEL</div>;
+  return (
+    <div className={classes.btn}>
+      PANEL
+      <button onClick={onClick}>BTN</button>
+    </div>
+  );
 };
