@@ -10,7 +10,7 @@ export const useStyles = makeStyles()((theme) => ({
     display: "flex",
     justifyContent: "center",
     width: "100%",
-    backgroundColor: "brown",
+    backgroundColor: "rgba(192,128,128,.1)",
   },
   container: {
     width: "100%",
@@ -18,6 +18,7 @@ export const useStyles = makeStyles()((theme) => ({
     alignItems: "center",
     display: "flex",
     justifyContent: "space-between",
+
     [theme.breakpoints.down("md")]: {
       height: FOOTER_MOBILE_PERSONAL_AREA_HEIGHT,
     },

@@ -11,7 +11,7 @@ export const useStyles = makeStyles()((theme) => ({
     height: "56px",
     display: "flex",
     alignItems: "center",
-    backgroundColor: "green",
+    backgroundColor: "rgba(107,174,74,.1)",
     padding: "0 12px",
     zIndex: 1100,
     transform: "translateY(0px)",

@@ -37,6 +37,13 @@ export const useStyles = makeStyles()((theme) => ({
     width: "100%",
     maxHeight: `calc(100vh - ${HEADER_DESKTOP_HEIGHT}px - ${FOOTER_DESKTOP_PERSONAL_AREA_HEIGHT}px - ${PANEL_SHIFT_TOP}px - ${PANEL_SHIFT_BOTTOM}px - 48px)`,
     overflowY: "auto",
+
+    [theme.breakpoints.down("lg")]: {
+      maxHeight: `calc(100vh - ${HEADER_DESKTOP_HEIGHT}px - ${FOOTER_DESKTOP_PERSONAL_AREA_HEIGHT}px - ${MOBILE_BAR_HEIGHT}px - ${PANEL_SHIFT_TOP}px - ${PANEL_SHIFT_BOTTOM}px - 48px)`,
+    },
+    [theme.breakpoints.down("md")]: {
+      maxHeight: `calc(100vh - ${HEADER_DESKTOP_HEIGHT}px - ${FOOTER_MOBILE_PERSONAL_AREA_HEIGHT}px - ${MOBILE_BAR_HEIGHT}px - ${PANEL_SHIFT_TOP}px - ${PANEL_SHIFT_BOTTOM}px - 48px)`,
+    },
   },
   map: {
     position: "absolute",
@@ -46,6 +53,13 @@ export const useStyles = makeStyles()((theme) => ({
     bottom: FOOTER_DESKTOP_PERSONAL_AREA_HEIGHT,
     display: "block",
     overflow: "hidden",
+
+    [theme.breakpoints.down("lg")]: {
+      bottom: MOBILE_BAR_HEIGHT + FOOTER_DESKTOP_PERSONAL_AREA_HEIGHT,
+    },
+    [theme.breakpoints.down("md")]: {
+      bottom: MOBILE_BAR_HEIGHT + FOOTER_MOBILE_PERSONAL_AREA_HEIGHT,
+    },
   },
   mapContainer: {
     display: "block",
@@ -57,24 +71,9 @@ export const useStyles = makeStyles()((theme) => ({
     bottom: 0,
     display: "flex",
     width: "100%",
-  },
-  [theme.breakpoints.down("lg")]: {
-    panelWrapper: {
-      maxHeight: `calc(100vh - ${HEADER_DESKTOP_HEIGHT}px - ${FOOTER_DESKTOP_PERSONAL_AREA_HEIGHT}px - ${MOBILE_BAR_HEIGHT}px - ${PANEL_SHIFT_TOP}px - ${PANEL_SHIFT_BOTTOM}px - 48px)`,
-    },
-    map: {
-      bottom: MOBILE_BAR_HEIGHT + FOOTER_DESKTOP_PERSONAL_AREA_HEIGHT,
-    },
-    footer: {
+
+    [theme.breakpoints.down("lg")]: {
       paddingBottom: MOBILE_BAR_HEIGHT,
-    },
-  },
-  [theme.breakpoints.down("md")]: {
-    panelWrapper: {
-      maxHeight: `calc(100vh - ${HEADER_DESKTOP_HEIGHT}px - ${FOOTER_MOBILE_PERSONAL_AREA_HEIGHT}px - ${MOBILE_BAR_HEIGHT}px - ${PANEL_SHIFT_TOP}px - ${PANEL_SHIFT_BOTTOM}px - 48px)`,
-    },
-    map: {
-      bottom: MOBILE_BAR_HEIGHT + FOOTER_MOBILE_PERSONAL_AREA_HEIGHT,
     },
   },
 }));
