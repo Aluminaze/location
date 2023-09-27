@@ -12,23 +12,18 @@ const PANEL_SHIFT_BOTTOM = 16;
 
 export const useStyles = makeStyles()((theme) => ({
   blockMap: {
-    position: "absolute",
-    left: "0px",
-    top: "0px",
-    right: "0px",
-    bottom: "0px",
-    width: "100%",
-    height: "100%",
-    display: "block",
+    position: "relative",
+    display: "flex",
     flexDirection: "column",
+    width: "100%",
+    height: `calc(100svh - ${HEADER_DESKTOP_HEIGHT}px)`,
     overflow: "hidden",
     border: "1px solid red",
-    backgroundColor: "gray",
+    backgroundColor: "rgba(0,0,0,.1)",
 
-    // [theme.breakpoints.down("lg")]: {
-    // maxHeight: `calc(100vh - ${HEADER_DESKTOP_HEIGHT}px - ${MOBILE_BAR_HEIGHT}px)`,
-    // minHeight: `calc(100vh - ${HEADER_DESKTOP_HEIGHT}px - ${MOBILE_BAR_HEIGHT}px)`,
-    // },
+    [theme.breakpoints.down("lg")]: {
+      height: `calc(100svh - ${HEADER_DESKTOP_HEIGHT}px - ${MOBILE_BAR_HEIGHT}px)`,
+    },
   },
   panel: {
     width: "328px",
@@ -65,10 +60,6 @@ export const useStyles = makeStyles()((theme) => ({
 
     width: "100%",
     height: "100%",
-
-    [theme.breakpoints.down("lg")]: {
-      height: `calc(100% - ${MOBILE_BAR_HEIGHT}px)`,
-    },
   },
   mapContainer: {
     display: "block",
