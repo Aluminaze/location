@@ -64,9 +64,13 @@ export const useStyles = makeStyles()((theme) => ({
 
     width: "100%",
     height: "100%",
+    minheight: "100%",
+    maxHeight: "100%",
 
     [theme.breakpoints.down("lg")]: {
-      height: "calc(100% - 50px)",
+      height: "calc(100vh - 150px)",
+      minheight: "calc(100vh - 150px)",
+      maxheight: "calc(100vh - 150px)",
     },
   },
   mapContainer: {
