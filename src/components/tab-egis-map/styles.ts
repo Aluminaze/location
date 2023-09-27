@@ -16,14 +16,12 @@ export const useStyles = makeStyles()((theme) => ({
     width: "100%",
     display: "flex",
     flexDirection: "column",
-    flexGrow: 1,
     maxHeight: `calc(100vh - ${HEADER_DESKTOP_HEIGHT}px)`,
     minHeight: `calc(100vh - ${HEADER_DESKTOP_HEIGHT}px)`,
+    overflow: "hidden",
     border: "1px solid red",
-    overflowY: "hidden",
 
     [theme.breakpoints.down("lg")]: {
-      marginBottom: MOBILE_BAR_HEIGHT,
       maxHeight: `calc(100vh - ${HEADER_DESKTOP_HEIGHT}px - ${MOBILE_BAR_HEIGHT}px)`,
       minHeight: `calc(100vh - ${HEADER_DESKTOP_HEIGHT}px - ${MOBILE_BAR_HEIGHT}px)`,
     },
@@ -56,21 +54,8 @@ export const useStyles = makeStyles()((theme) => ({
     },
   },
   map: {
-    position: "absolute",
-    left: 0,
-    right: 0,
-    top: 0,
-    bottom: FOOTER_DESKTOP_PERSONAL_AREA_HEIGHT,
-    display: "block",
-    overflow: "hidden",
-    border: "1px solid green",
-
-    // [theme.breakpoints.down("lg")]: {
-    //   bottom: MOBILE_BAR_HEIGHT + FOOTER_DESKTOP_PERSONAL_AREA_HEIGHT,
-    // },
-    // [theme.breakpoints.down("md")]: {
-    //   bottom: MOBILE_BAR_HEIGHT + FOOTER_MOBILE_PERSONAL_AREA_HEIGHT,
-    // },
+    display: "flex",
+    flexDirection: "column",
   },
   mapContainer: {
     display: "block",
@@ -84,9 +69,5 @@ export const useStyles = makeStyles()((theme) => ({
     bottom: 0,
     display: "flex",
     width: "100%",
-
-    [theme.breakpoints.down("lg")]: {
-      paddingBottom: MOBILE_BAR_HEIGHT,
-    },
   },
 }));
