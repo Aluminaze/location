@@ -16,13 +16,13 @@ export const useStyles = makeStyles()((theme) => ({
     display: "flex",
     flexDirection: "column",
     width: "100%",
-    height: `calc(var(--vh, 1vh) * 100 - ${HEADER_DESKTOP_HEIGHT}px)`,
+    height: `calc(var(--vh, 1vh) * 100 - ${HEADER_DESKTOP_HEIGHT}px - ${FOOTER_DESKTOP_PERSONAL_AREA_HEIGHT}px)`,
     overflow: "hidden",
     border: "1px solid red",
     backgroundColor: "rgba(0,0,0,.1)",
 
     [theme.breakpoints.down("lg")]: {
-      height: `calc(var(--vh, 1vh) * 100 - ${HEADER_DESKTOP_HEIGHT}px - ${MOBILE_BAR_HEIGHT}px)`,
+      height: `calc(var(--vh, 1vh) * 100 - ${HEADER_DESKTOP_HEIGHT}px - ${MOBILE_BAR_HEIGHT}px - ${FOOTER_DESKTOP_PERSONAL_AREA_HEIGHT}px)`,
     },
   },
   panel: {
@@ -57,7 +57,6 @@ export const useStyles = makeStyles()((theme) => ({
     flexDirection: "column",
     border: "1px solid green",
     overflow: "hidden",
-
     width: "100%",
     height: "100%",
   },
@@ -73,5 +72,9 @@ export const useStyles = makeStyles()((theme) => ({
     bottom: 0,
     display: "flex",
     width: "100%",
+
+    [theme.breakpoints.down("lg")]: {
+      bottom: MOBILE_BAR_HEIGHT,
+    },
   },
 }));

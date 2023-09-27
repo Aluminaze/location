@@ -4,7 +4,7 @@ import { ButtonMobilePanel } from "./components/button-mobile-panel";
 import { useStyles } from "./styles";
 import "./index.css";
 import { useDisplayStatus } from "../../hooks/use-display-status";
-// import { FooterOfPersonalArea } from "../footer-of-personal-area";
+import { FooterOfPersonalArea } from "../footer-of-personal-area";
 
 export const TabEgisMap = (): JSX.Element => {
   const { classes } = useStyles();
@@ -540,10 +540,10 @@ export const TabEgisMap = (): JSX.Element => {
             error culpa consequuntur accusantium at impedit quidem sequi libero
             magni, aspernatur deserunt. Vitae.
           </div>
-        </div>
+        </div> */}
         <div className={classes.footer}>
           <FooterOfPersonalArea />
-        </div> */}
+        </div>
       </div>
     </>
   );
