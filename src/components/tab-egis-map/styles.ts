@@ -17,12 +17,13 @@ export const useStyles = makeStyles()((theme) => ({
     display: "flex",
     flexDirection: "column",
     flexGrow: 1,
-    maxHeight: `100%`,
-    minHeight: `100%`,
+    maxHeight: `calc(100vh - ${HEADER_DESKTOP_HEIGHT}px)`,
+    minHeight: `calc(100vh - ${HEADER_DESKTOP_HEIGHT}px)`,
     border: "1px solid red",
+    overflowY: "hidden",
 
     [theme.breakpoints.down("lg")]: {
-      marginBottom: MOBILE_BAR_HEIGHT,
+      // marginBottom: MOBILE_BAR_HEIGHT,
     },
   },
   panel: {
