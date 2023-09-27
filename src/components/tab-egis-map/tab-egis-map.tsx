@@ -34,20 +34,20 @@ export const TabEgisMap = (): JSX.Element => {
     }
   };
 
-  // React.useEffect(() => {
-  //   const body = document.querySelector("body");
-  //   if (isMobileVersion) {
-  //     if (body) {
-  //       body.style.overflow = "hidden";
-  //       body.style.position = "fixed";
-  //     }
-  //   } else {
-  //     if (body) {
-  //       body.style.overflow = "";
-  //       body.style.position = "";
-  //     }
-  //   }
-  // }, [isMobileVersion]);
+  React.useEffect(() => {
+    const body = document.querySelector("body");
+    if (isMobileVersion) {
+      if (body) {
+        body.style.overflow = "hidden";
+        // body.style.position = "fixed";
+      }
+    } else {
+      if (body) {
+        body.style.overflow = "";
+        // body.style.position = "";
+      }
+    }
+  }, [isMobileVersion]);
 
   return (
     <>
