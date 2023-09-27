@@ -13,7 +13,7 @@ export const useStyles = makeStyles()((theme) => {
     },
     main: {
       width: "100%",
-      minHeight: `calc(100dvh - ${HEADER_DESKTOP_HEIGHT}px)`,
+      minHeight: `calc(100vh - ${HEADER_DESKTOP_HEIGHT})px`,
       marginTop: `${HEADER_DESKTOP_HEIGHT}px`,
       display: "flex",
       flexDirection: "column",
