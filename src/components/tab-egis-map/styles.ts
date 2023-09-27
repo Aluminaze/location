@@ -18,11 +18,13 @@ export const useStyles = makeStyles()((theme) => ({
     width: "100%",
     height: `calc(var(--vh, 1vh) * 100 - ${HEADER_DESKTOP_HEIGHT}px - ${FOOTER_DESKTOP_PERSONAL_AREA_HEIGHT}px)`,
     overflow: "hidden",
-    border: "1px solid red",
     backgroundColor: "rgba(0,0,0,.1)",
 
     [theme.breakpoints.down("lg")]: {
       height: `calc(var(--vh, 1vh) * 100 - ${HEADER_DESKTOP_HEIGHT}px - ${MOBILE_BAR_HEIGHT}px - ${FOOTER_DESKTOP_PERSONAL_AREA_HEIGHT}px)`,
+    },
+    [theme.breakpoints.down("md")]: {
+      height: `calc(var(--vh, 1vh) * 100 - ${HEADER_DESKTOP_HEIGHT}px - ${MOBILE_BAR_HEIGHT}px - ${FOOTER_MOBILE_PERSONAL_AREA_HEIGHT}px)`,
     },
   },
   panel: {
@@ -55,7 +57,6 @@ export const useStyles = makeStyles()((theme) => ({
   map: {
     display: "flex",
     flexDirection: "column",
-    border: "1px solid green",
     overflow: "hidden",
     width: "100%",
     height: "100%",
