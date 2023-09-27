@@ -17,6 +17,13 @@ export const useStyles = makeStyles()((theme) => ({
     display: "flex",
     flexDirection: "column",
     flexGrow: 1,
+    maxHeight: `100%`,
+    minHeight: `100%`,
+    border: "1px solid red",
+
+    [theme.breakpoints.down("lg")]: {
+      marginBottom: MOBILE_BAR_HEIGHT,
+    },
   },
   panel: {
     width: "328px",
@@ -53,18 +60,21 @@ export const useStyles = makeStyles()((theme) => ({
     bottom: FOOTER_DESKTOP_PERSONAL_AREA_HEIGHT,
     display: "block",
     overflow: "hidden",
+    border: "1px solid green",
 
-    [theme.breakpoints.down("lg")]: {
-      bottom: MOBILE_BAR_HEIGHT + FOOTER_DESKTOP_PERSONAL_AREA_HEIGHT,
-    },
-    [theme.breakpoints.down("md")]: {
-      bottom: MOBILE_BAR_HEIGHT + FOOTER_MOBILE_PERSONAL_AREA_HEIGHT,
-    },
+    // [theme.breakpoints.down("lg")]: {
+    //   bottom: MOBILE_BAR_HEIGHT + FOOTER_DESKTOP_PERSONAL_AREA_HEIGHT,
+    // },
+    // [theme.breakpoints.down("md")]: {
+    //   bottom: MOBILE_BAR_HEIGHT + FOOTER_MOBILE_PERSONAL_AREA_HEIGHT,
+    // },
   },
   mapContainer: {
     display: "block",
     width: "100%",
     height: "100%",
+    maxHeight: "100%",
+    minHeight: "100%",
   },
   footer: {
     position: "fixed",
