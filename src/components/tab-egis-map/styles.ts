@@ -16,13 +16,13 @@ export const useStyles = makeStyles()((theme) => ({
     display: "flex",
     flexDirection: "column",
     width: "100%",
-    height: `calc(100svh - ${HEADER_DESKTOP_HEIGHT}px)`,
+    height: `calc(var(--vh, 1vh) * 100 - ${HEADER_DESKTOP_HEIGHT}px)`,
     overflow: "hidden",
     border: "1px solid red",
     backgroundColor: "rgba(0,0,0,.1)",
 
     [theme.breakpoints.down("lg")]: {
-      height: `calc(100svh - ${HEADER_DESKTOP_HEIGHT}px - ${MOBILE_BAR_HEIGHT}px)`,
+      height: `calc(var(--vh, 1vh) * 100 - ${HEADER_DESKTOP_HEIGHT}px - ${MOBILE_BAR_HEIGHT}px)`,
     },
   },
   panel: {
