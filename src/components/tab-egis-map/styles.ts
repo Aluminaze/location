@@ -6,8 +6,6 @@ import {
 } from "../../constants/sizes";
 import { makeStyles } from "tss-react/mui";
 
-import { Theme } from "@mui/material/styles";
-
 const PANEL_SHIFT_TOP = 16;
 const PANEL_SHIFT_LEFT = 8;
 const PANEL_SHIFT_BOTTOM = 16;
